@@ -1,0 +1,288 @@
+/* ==================== GLOBAL RESET & LAYOUT ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background-color: #333333; /* Warna gelap background canvas wireframe */
+    color: #000000;
+}
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ==================== AUTH / LOGIN CONTAINER (BARIS 1) ==================== */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 20px;
+    background-color: #e0e0e0;
+}
+.wireframe-box {
+    background: #e0e0e0;
+    border: 2px solid #000000;
+    padding: 20px;
+    width: 320px;
+    position: relative;
+}
+.auth-box h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+.auth-box input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    background: transparent;
+}
+.auth-box button {
+    width: 100%;
+    padding: 8px;
+    background: transparent;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+.auth-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 12px;
+}
+.auth-links a, .back-header a {
+    color: #000;
+    text-decoration: none;
+}
+.back-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+}
+
+/* ERROR POPUP MODAL (Kotak ke-4) */
+.error-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.error-modal {
+    background: #e0e0e0;
+    border: 2px solid #000;
+    width: 100%;
+    text-align: center;
+}
+.error-title {
+    border-bottom: 1px solid #000;
+    padding: 5px;
+}
+.error-msg {
+    padding: 20px 10px;
+}
+.btn-modal {
+    display: block;
+    border-top: 1px solid #000;
+    padding: 5px;
+    color: #000;
+    text-decoration: none;
+}
+
+/* ==================== HOVER SIDEBAR LEFT ==================== */
+.sidebar {
+    background-color: #e0e0e0;
+    width: 60px; /* Keadaan menciut */
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid #000;
+    transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    white-space: nowrap;
+    position: fixed;
+    height: 100vh;
+    z-index: 50;
+}
+.sidebar:hover {
+    width: 240px; /* Membuka opsi saat kursor mengarah */
+}
+.logo-area {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 2px solid #000;
+}
+.logo-icon { font-size: 20px; }
+.logo-text { font-weight: bold; }
+
+.nav-menu { flex: 1; padding-top: 20px; }
+.sidebar ul { list-style: none; }
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 18px;
+    color: #000;
+    text-decoration: none;
+    gap: 20px;
+}
+.sidebar ul li:hover, .sidebar ul li.active {
+    background-color: #b5b5b5;
+}
+.sidebar-footer { border-top: 2px solid #000; padding-bottom: 10px; }
+
+/* ==================== CONTENT CONTAINER ==================== */
+.main-content {
+    flex: 1;
+    margin-left: 60px;
+    padding: 30px;
+    background-color: #b5b5b5; /* Dashboard area luar */
+    min-height: 100vh;
+}
+
+/* PLACEHOLDER SILANG (X) */
+.wireframe-placeholder-box {
+    background: #e0e0e0;
+    border: 2px solid #000;
+    height: 400px;
+    position: relative;
+    padding: 20px;
+}
+.cross-lines::before, .cross-lines::after {
+    content: ""; position: absolute;
+    top: 0; bottom: 0; left: 50%;
+    width: 1px; background: #999;
+}
+.cross-lines::before { transform: rotate(45deg); height: 100%; }
+.cross-lines::after { transform: rotate(-45deg); height: 100%; }
+
+/* MODUL BERITA (Baris 3 Kotak 1) */
+.news-container {
+    background: #e0e0e0;
+    border: 2px solid #000;
+    padding: 20px;
+    height: 100%;
+}
+.news-list { margin-top: 20px; }
+.news-grid {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+.cross-box {
+    width: 120px; height: 80px;
+    border: 1px solid #000;
+    position: relative;
+    background: linear-gradient(to top right, transparent 49%, #000 49%, #000 51%, transparent 51%),
+                linear-gradient(to top left, transparent 49%, #000 49%, #000 51%, transparent 51%);
+}
+.news-footer-line {
+    border-bottom: 1px solid #000; width: 40px; margin-top: 10px;
+}
+
+/* ==================== MANAGEMENT AKUN (Pusat Kotak Biru & Baris 4) ==================== */
+.account-header {
+    text-align: right;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 5px;
+    padding-right: 5px;
+}
+.account-layout-box {
+    display: flex;
+    background: #e0e0e0;
+    border: 3px solid #1a73e8; /* Bingkai Biru penanda fokus wireframe Anda */
+    min-height: 450px;
+}
+.account-nav-side {
+    width: 180px;
+    border-right: 2px solid #000;
+    padding: 15px 0;
+}
+.nav-title { padding: 0 15px 10px 15px; border-bottom: 1px solid #000; }
+.account-nav-side ul { list-style: none; }
+.account-nav-side ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: #000;
+    text-decoration: none;
+    font-size: 13px;
+}
+.account-nav-side ul li.active {
+    background: #bcbcbc;
+}
+
+/* Bagian data kanan */
+.account-content-side {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+}
+.info-block h4 {
+    margin-bottom: 15px;
+}
+.info-group p {
+    margin-bottom: 8px;
+}
+
+/* Simulasi Popup mini di dalam info akun (wireframe baris 2 tengah) */
+.center-actions-mock {
+    border: 1px solid #000;
+    padding: 10px;
+    width: 220px;
+    margin: 30px auto;
+    text-align: center;
+    font-size: 13px;
+}
+.user-badge {
+    border: 1px solid #000;
+    padding: 4px; margin: 5px 0;
+}
+.btn-sub {
+    width: 100%; padding: 4px; background: transparent; border: 1px solid #000;
+}
+
+/* Tombol Aksi */
+.btn-wireframe-logout {
+    position: absolute;
+    bottom: 20px; right: 20px;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    color: #000; text-decoration: none;
+}
+.form-wireframe {
+    max-width: 400px;
+}
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.form-row label {
+    width: 150px;
+    font-size: 13px;
+}
+.form-row input {
+    flex: 1;
+    padding: 4px;
+    border: 1px solid #000;
+    background: transparent;
+}
+.btn-simpan {
+    float: right;
+    padding: 5px 20px;
+    background: transparent;
+    border: 1px solid #000;
+    margin-top: 20px;
+    cursor: pointer;
+}
