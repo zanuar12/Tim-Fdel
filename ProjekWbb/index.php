@@ -24,13 +24,13 @@ if (!isset($_SESSION['user'])) {
 </head>
 <body>
 
-    <?php if (in_array($page, ['login', 'daftar', 'lupa_sandi', 'lupa_sandi_error'])): ?>
+    <?php if (in_array($page, ['login', 'daftar', 'lupasandi', 'lupasandierror'])): ?>
         <div class="auth-container">
             <?php 
                 if ($page == 'login') include 'pages/login.php';
                 if ($page == 'daftar') include 'pages/daftar.php';
-                if ($page == 'lupa_sandi') include 'pages/lupa_sandi.php';
-                if ($page == 'lupa_sandi_error') include 'pages/lupa_sandi.php'; // memuat file sama dengan flag error
+                if ($page == 'lupasandi') include 'pages/lupasandi.php';
+                if ($page == 'lupasandierror') include 'pages/lupasandi.php'; // memuat file sama dengan flag error
             ?>
         </div>
 
@@ -62,7 +62,7 @@ if (!isset($_SESSION['user'])) {
                         case 'ubah_email':
                         case 'ubah_sandi':
                             // Wrapper khusus untuk modul Manajemen Akun (Box Biru & Baris Bawah)
-                            include 'pages/akun_info.php'; 
+                            include 'pages/akuninfo.php'; 
                             break;
                             
                         default:
