@@ -7,6 +7,6 @@
     </form>
     <div class="auth-links">
         <a href="index.php?page=daftar">Daftar</a>
-        <a href="index.php?page=lupa_sandi">Lupa Password?</a>
+        <a href="index.php?page=lupasandi">Lupa Password?</a>
     </div>
 </div>

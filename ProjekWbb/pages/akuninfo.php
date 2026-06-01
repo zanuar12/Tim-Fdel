@@ -32,9 +32,8 @@ $sub_page = isset($_GET['page']) ? $_GET['page'] : 'akun';
                     <p>Email: <?php echo $_SESSION['user']['email']; ?></p>
                 </div>
                 <div class="center-actions-mock">
-                    <p>Akun sandi ini</p>
+                    <p>Akun Saat ini</p>
                     <div class="user-badge"><?php echo $_SESSION['user']['email']; ?></div>
-                    <button class="btn-sub">Pusat Akun</button>
                 </div>
                 <a href="index.php?page=login" class="btn-wireframe-logout">Logout</a>
             </div>

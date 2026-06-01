@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 12, 2026 at 01:11 PM
+-- Generation Time: Jun 01, 2026 at 08:22 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -24,33 +24,42 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `testabel`
+-- Table structure for table `userr`
 --
 
-CREATE TABLE `testabel` (
-  `id` int NOT NULL,
-  `tes` varchar(50) NOT NULL
+CREATE TABLE `userr` (
+  `userid` int NOT NULL,
+  `username` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `useremail` varchar(100) NOT NULL,
+  `userpass` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `userr`
+--
+
+INSERT INTO `userr` (`userid`, `username`, `useremail`, `userpass`) VALUES
+(1, 'atmin', 'atmin@123', '321');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `testabel`
+-- Indexes for table `userr`
 --
-ALTER TABLE `testabel`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `userr`
+  ADD PRIMARY KEY (`userid`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `testabel`
+-- AUTO_INCREMENT for table `userr`
 --
-ALTER TABLE `testabel`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+ALTER TABLE `userr`
+  MODIFY `userid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
