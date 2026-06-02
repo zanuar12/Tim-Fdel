@@ -10,9 +10,7 @@ if (isset($_GET['msg'])) {
     $msg_type = (isset($_GET['status']) && $_GET['status'] == 'success') ? 'bg-pine' : 'bg-terracotta'; 
 }
 
-// ==========================================
-// LOGIKA BACKEND AUTHENTICATION
-// ==========================================
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && $page == 'proses_daftar') {
     $email = filter_var($_POST['email_daftar'], FILTER_SANITIZE_EMAIL);
     $pass  = $_POST['pass_daftar'];
