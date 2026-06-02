@@ -36,8 +36,8 @@
                 <i class="fa-solid fa-user-astronaut text-4xl text-gray-400"></i>
             </div>
             <h3 class="text-lg font-bold text-slate-dark">Tim Pengembang</h3>
-            <p class="text-sm text-terracotta font-semibold mb-3">Administrator MVP</p>
-            <p class="text-xs text-gray-500 mb-5 px-2">Proyek ini dikembangkan sebagai prototipe (MVP) platform jurnalisme lingkungan hidup.</p>
+            <p class="text-sm text-terracotta font-semibold mb-3">kelompok Fadel</p>
+            <p class="text-xs text-gray-500 mb-5 px-2">Proyek ini dikembangkan sebagai prototipe platform jurnalisme lingkungan hidup.</p>
             <div class="flex justify-center gap-3">
                 <a href="#" class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-pine hover:text-white transition-colors"><i class="fa-brands fa-github"></i></a>
                 <a href="#" class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -47,8 +47,8 @@
         <div class="bg-off-white border border-pine/20 rounded-2xl p-6 shadow-sm">
             <h3 class="font-bold text-slate-dark mb-4">Hubungi Kami</h3>
             <ul class="space-y-3 text-sm text-gray-600">
-                <li class="flex items-start gap-3"><i class="fa-solid fa-envelope mt-1 text-pine"></i> <span>halo@eduiklim.local</span></li>
-                <li class="flex items-start gap-3"><i class="fa-solid fa-map-location-dot mt-1 text-pine"></i> <span>Laboratorium Web, Universitas Nusantara</span></li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-envelope mt-1 text-pine"></i> <span>admin@iklim.id</span></li>
+                <li class="flex items-start gap-3"><i class="fa-solid fa-map-location-dot mt-1 text-pine"></i> <span>Laboratorium Web, Universitas Gorengan Rekkk</span></li>
             </ul>
         </div>
     </div>
