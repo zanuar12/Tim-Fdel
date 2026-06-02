@@ -10,7 +10,9 @@ if (isset($_GET['msg'])) {
     $msg_type = (isset($_GET['status']) && $_GET['status'] == 'success') ? 'bg-pine' : 'bg-terracotta'; 
 }
 
-
+// ==========================================
+// LOGIKA BACKEND AUTHENTICATION
+// ==========================================
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && $page == 'proses_daftar') {
     $email = filter_var($_POST['email_daftar'], FILTER_SANITIZE_EMAIL);
     $pass  = $_POST['pass_daftar'];
@@ -113,14 +115,23 @@ if ($page == 'logout') { session_destroy(); header("Location: index.php?page=ber
                 </div>
             <?php elseif ($page == 'daftar'): ?>
                 <div class="bg-white border border-border-gray p-8 rounded-xl shadow-md w-full max-w-[400px]">
-                    <div class="mb-4"><a href="index.php?page=login" class="text-slate-dark text-sm hover:underline"><i class="fa-solid fa-arrow-left"></i> Kembali</a></div>
-                    <h3 class="text-center font-bold text-xl mb-5">Daftar Akun Admin</h3>
-                    <form action="index.php?page=proses_daftar" method="POST">
-                        <input type="email" name="email_daftar" placeholder="Masukkan alamat email" required class="w-full p-3 mb-4 border border-border-gray rounded-lg bg-off-white text-sm focus:outline-pine">
-                        <input type="password" name="pass_daftar" placeholder="Masukkan kata sandi" required class="w-full p-3 mb-4 border border-border-gray rounded-lg bg-off-white text-sm focus:outline-pine">
-                        <input type="password" name="pass_confirm" placeholder="Masukkan ulang kata sandi" required class="w-full p-3 mb-4 border border-border-gray rounded-lg bg-off-white text-sm focus:outline-pine">
-                        <button type="submit" class="w-full bg-pine hover:bg-pine-hover text-white font-bold py-3 rounded-lg transition-colors">Daftar Sekarang</button>
+                    </div>
+                
+            <?php elseif ($page == 'lupasandi'): ?>
+                <div class="bg-white border border-border-gray p-8 rounded-xl shadow-md w-full max-w-[400px]">
+                    <div class="mb-4"><a href="index.php?page=login" class="text-slate-dark text-sm hover:underline"><i class="fa-solid fa-arrow-left"></i> Kembali ke Login</a></div>
+                    <h3 class="text-center font-bold text-xl mb-2">Pemulihan Sandi</h3>
+                    <p class="text-center text-sm text-gray-500 mb-5">Masukkan email Anda untuk menerima tautan pemulihan akun.</p>
+                    
+                    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Sistem sedang dalam mode lokal (MVP). Fitur pengiriman email token SMTP dinonaktifkan demi keamanan. Hubungi SuperAdmin atau edit hash secara manual di phpMyAdmin.');">
+                        <input type="email" name="email_reset" placeholder="Masukkan alamat email terdaftar" required class="w-full p-3 mb-4 border border-border-gray rounded-lg bg-off-white text-sm focus:outline-pine">
+                        <button type="submit" class="w-full bg-terracotta hover:bg-red-700 text-white font-bold py-3 rounded-lg transition-colors"><i class="fa-solid fa-envelope mr-2"></i> Kirim Tautan Reset</button>
                     </form>
+                    
+                    <div class="mt-6 p-4 bg-orange-50 border border-orange-200 rounded-lg text-xs text-orange-800 leading-relaxed text-justify">
+                        <strong><i class="fa-solid fa-triangle-exclamation mr-1"></i> Mode Pengembang (Localhost)</strong><br>
+                        Pengiriman email otomatis diblokir oleh sistem lokal. Jika Anda kehilangan akses admin saat pengujian, silakan daftarkan akun baru atau kosongkan tabel <code>userr</code> di *database*.
+                    </div>
                 </div>
             <?php endif; ?>
         </div>
