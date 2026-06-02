@@ -1,5 +1,4 @@
 <?php
-// Mengambil halaman aktif untuk memberikan class 'active' pada menu navbar
 $current_page = isset($_GET['page']) ? $_GET['page'] : 'login';
 ?>
 <aside class="sidebar">
