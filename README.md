@@ -1,4 +1,4 @@
-# Kelompok 7 Project Repository
+# Kelompok 1G Project Repository
 Pemrograman Web Praktik 1
 
 Anggota:
