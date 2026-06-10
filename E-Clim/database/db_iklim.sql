@@ -60,7 +60,7 @@ INSERT INTO `berita` (`id_berita`, `judul`, `konten`, `gambar`, `penulis_id`, `t
 
 --
 -- Table structure for table `userr`
---
+-- 
 
 CREATE TABLE `userr` (
   `userid` int NOT NULL,
@@ -72,7 +72,8 @@ CREATE TABLE `userr` (
 
 --
 -- Dumping data for table `userr`
---
+-- email: admin@iklim.id
+-- Password: password
 
 INSERT INTO `userr` (`userid`, `username`, `useremail`, `userpass`, `created_at`) VALUES
 (1, 'DEWA CUACA', 'admin@iklim.id', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '2026-06-01 10:19:50'),
